@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    ucloud = {
+      source  = "ucloud/ucloud"
+      version = ">=1.24.1"
+    }
+  }
+}
+
 data "ucloud_images" "centos" {
   name_regex        = "^CentOS 7"
   availability_zone = var.az
